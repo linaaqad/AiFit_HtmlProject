@@ -1,0 +1,740 @@
+	body.login{
+		margin: 0;
+		padding: 0;
+		background-image: url(photos/background.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		font-family : Verdana,Tahoma, sans-serif;
+		
+	}
+
+	.noback {
+		border-radius: 50%;
+	}
+
+	.foot{
+		background-color: black;
+		color: white;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height:50px; /*Increase the height as needed */
+		font-size: 15px;
+	}
+
+	.rights-icon {
+		margin-right: 5px;
+	}
+
+	.no-white{
+		width: 70px;
+		height: 50px;
+		object-fit:contain;
+		mix-blend-mode : color-burn ;
+		background-color: transparent;
+	}
+
+	.icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	/* .logo-image { */
+		/* width: 70px; */
+		/* height: 50px; */
+		/* mix-blend-mode=multiply; */
+	/* } */
+
+	.topnav {
+		font-family: "Sofia",sans-serif;
+		background-color: rgba(255,255,255,0.4);
+		overflow: hidden;
+		position: sticky;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		color: black;
+		z-index: 9999;
+	}
+
+	/* Style the links inside the navigation bar */
+	.topnav a {
+		float: left;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	
+	.topnav a.logo {
+		float: left;
+		color: #000000;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	/* Change the color of links on hover */
+	.topnav a:hover {
+		background-color:#2e2e2e;
+		color: white;
+	}
+
+	.topnav a.split:hover {
+		background-color:#2e2e2e;
+		color: white;
+	}
+
+	/* Create a right-aligned (split) link inside the navigation bar */
+	.topnav a.split {
+		float: right;
+		color: #000000;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	.box{
+		width: 380px;
+		height: 780px;
+		background-color:rgba(0, 0, 0, 0.5);
+		padding: 20px;
+		margin: 8% auto 0;
+		text-align: center;
+		position: relative;
+		box-sizing: border-box;
+		flex-direction: column;
+	}
+
+	.box img{
+		width:100px;
+		margin-top:-50px ;
+	}
+
+	.header {
+		width: 300px;
+		height: 50px;
+		text-transform: uppercase;
+		display: inline-flex;
+		padding-top: 20px;
+		padding-bottom: 0;
+		justify-content: space-between;
+	}
+
+	.header a {
+		font-size: 20px;
+		text-decoration: none;
+		color: #ffffff;
+		display: inline-flex;
+		padding-left: 25px;
+		padding-right: 25px;
+		justify-content: center;
+		cursor:pointer;
+	}
+
+	.header .active {
+		color: #df80ff;
+		font-weight: bold;
+		position: relative;
+	}
+
+	.header .active:after {
+		position: absolute;
+		border: none;
+		content: "";
+	}
+
+	#errorMsg{
+		color:red;
+		text-align: center;
+		font-size: 12px;
+		padding-bottom: 20px;
+	}
+
+	.content{
+		display: inline-flex;
+		overflow: hidden;
+	}
+
+	form {
+		position: relative;
+		display: inline-flex;
+		width: 100%;
+		height: 100%;
+		flex-shrink: 0;
+		flex-direction: column;
+		transition: right 0.5s;
+	}
+
+	.login a{
+		text-decoration: none;
+		color: #ffffff;
+		font-size: 15px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.extend form {
+		right: 100%;
+	}
+
+	input[type=text], input[type=password], input[type=email]{
+		display:block;
+		position: relative;
+		border: 4px solid #ffffff;
+		padding: 12px;
+		margin-bottom: 15px;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 17px;
+		outline: none;
+	}
+
+	input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+		border: 4px solid #df80ff;
+
+	}
+
+	input[type=submit]{
+		display:block;
+		position: relative;
+		border: 3px solid #df80ff;
+		padding: 12px;
+		margin-bottom: 20px;
+		width: 100%;
+		border-radius: 25px;
+		background-color:#600080 ;
+		text-align:center;
+		font-size: 20px;
+		color: #ffffff;
+		cursor:pointer;
+		outline: none;
+	}
+	
+	input[type=submit]:hover{
+		 background-color:#ffffff;
+		 color: #000000;
+		 font-weight: bold;
+	}
+	input[type=checkbox]{
+		background-color:#df80ff;
+	}
+	#check{
+		margin-top: 10px;
+		text-align: left;
+		color: #ffffff;
+		font-size: 15px;
+	}
+	
+	
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color : #c4c4c4;
+		background-size: cover;
+		background-repeat: no-repeat;
+		filter: blur(5px); /* Adjust the blur amount as needed */
+		z-index: -1;
+	}
+
+	body.products img {
+		width: 200px;
+		height: 200px;
+		margin-bottom: 20px;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Add box-shadow property */
+	}
+
+	body.products .container {
+		max-width: 1350px;
+		margin: 0 auto;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.container {
+		overflow: hidden;
+	} 
+	
+	.container img {
+		transition: transform 0.3s;
+	}
+
+	.container img:hover {
+		transform: scale(2);
+	}
+	
+	body.products h1 {
+		margin-top: 30px;
+	}
+
+	body.products .product {
+		display: inline-block;
+		width: 300px;
+		margin: 20px;
+		padding: 20px;
+		background-color: rgba(245, 245, 245, 0.6); /* Adjust transparency here */
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		transition: box-shadow 0.2s ease;
+	}
+	
+	body.products .product:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Add stronger shadow on hover */
+	}
+
+	body.products  img {
+		width: 200px;
+		height: 200px;
+		margin-bottom: 20px;
+	}
+	
+	body.product:hover img {
+		transform: scale(1.2);
+		z-index: -1; /* Set a negative z-index to position the photo behind the text */
+	}
+	
+	body.products .product h2 {
+		font-size: 24px;
+		margin-bottom: 10px;
+		z-index: 2; 
+	}
+
+	body.products .product p {
+		font-size: 16px;
+		color: #555;
+		margin-bottom: 20px;
+		z-index: 2; 
+	}
+
+	body.products .product button {
+		padding: 10px 20px;
+		background-color: #4caf50;
+		background-color: #cc0ccf;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+		z-index: 2; 
+	}
+
+	body.products .product button:hover {
+		background-color: #45a049;
+	}
+
+
+	.contact {
+		font-family: "sofia", sans-serif;
+		line-height: 0.1; 
+		background-color: #1a1a1a;
+		color: white;
+		font-size: 20px;
+	}
+
+	.message {
+		position: fixed;
+		top: 15%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #f1f1f1;
+		color: #df80ff;
+		padding: 20px;
+		border-radius: 4px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+	
+	.quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-top: 10px;
+    }
+
+    .quantity input {
+      width: 70px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    }
+
+    .quantity button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .decrement,
+    .increment {
+        background-color: transparent !important;
+        border: none !important;
+        cursor: pointer ;
+		color: black !important;
+    }
+
+
+
+/*//////////////////////////////////////////////////////////////////////////*/
+
+	body.checkout {
+		background-color: #dbdbdb;
+	}
+
+
+	body.checkout .space {
+		letter-spacing: 0.8px ;
+	}
+
+	body.checkout .second a:hover {
+		color: rgb(92, 92, 92);
+	}
+
+	body.checkout .active-2 {
+		color: rgb(92, 92, 92);
+	}
+
+	body.checkout .first {
+		background-color: white;
+	}
+
+	body.checkout .btn-lg {
+		padding: 8px 1.6px;
+		font-size: 16px;
+		border-radius: 0;
+		color: white ;
+		background-color: #4bb8a9;/*//////////////////////////////////////////////////*/
+		background-color: #df80ff;
+		height: 44.8px ;
+		border-radius: 3.2px ;
+	}
+
+	body.checkout .card-header {
+		background-color: #ffffff;
+	}
+
+	.col {
+		text-align: center;
+		left : 20px;
+	}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+	body.foodlist {
+		background-size: cover;
+		background-image: url("photos/food2.jpg");
+		
+	}
+
+	body.foodlist .containerfood {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	body.foodlist .checkmark {
+		color: green;
+		margin-right: 5px;
+	}
+
+	body.foodlist .table-container {
+		margin-top: 30px;
+		margin-right: 300px;
+		text-align: center;
+		margin-bottom: 80px;
+		background-color: #e6e6e6;
+		display: flex;
+		position: relative;
+		border: 4px solid black;
+	}
+
+	body.foodlist .table-container table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	body.foodlist .table-container th,
+	body.foodlist .table-container td {
+		border: 1px solid black;
+		padding: 8px;
+	}
+
+	body.foodlist .bold-line {
+		border-bottom: 4px solid black;
+	}
+
+	body.foodlist .checkbox-label {
+		font-size: 24px;
+	}
+
+	.messagelist {
+		position: fixed;
+		top: 5.75%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: none;
+		font-size: 18px;
+		color: #ff0f00;
+		background-color: #ffffff;
+		padding: 5px 10px;
+	}
+
+	.messagelist.active {
+		top: 50px;
+	}
+	
+	.button-container {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -50px; /* Adjust the distance from the table */
+	}
+
+	.centered-button {
+		color: black;
+		background-color: #df80ff;
+	}
+	
+	.text-square {
+		display: none;
+		background-color: #f1f1f1;
+		padding: 0; /* Remove padding */
+		border: 1px solid #ccc;
+		width: 1000px;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		overflow-y: auto;
+		max-height: 400px;
+		max-width:1000px; 
+		margin-top : 10%;
+		z-index: 1;
+	}
+	
+	.textbox {
+		 font-family: 'Sofia', sans-serif;
+  position: absolute;
+  top: 50px;
+  right: 650px;
+  font-size: 30px;
+  width: 300px;
+  height: 50px;
+	}
+
+	.text-square input {
+		direction: rtl;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0; /* Remove padding */
+		margin: 0; /* Remove margin */
+	}
+
+	.additional-button {
+		/* Add your desired styles for the additional button */
+		color: black;
+		background-color: #df80ff;
+		padding: 10px 20px;
+		border-radius: 5px;
+		position: absolute;
+		left: -600px; /* Adjust the horizontal position */
+		margin-top : 10%;
+	}
+	
+	.sticky-iframe {
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Adjust the z-index as needed */
+  }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+
+	body.sportlist {
+		background-size: cover;
+		background-image: url("photos/sportback.jpg");
+	}
+
+	body.sportlist .containersport {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	body.sportlist .checkmark {
+		color: green;
+		margin-right: 5px;
+	}
+	
+	body.sportlist .table-container {
+		margin-top: 30px;
+		border: 4px solid black;
+		margin-right: 400px;
+		text-align: center;
+		margin-bottom: 80px;
+		background-color: #e6e6e6;
+		display: flex;
+		position: relative;
+	}
+
+	body.sportlist .table-container table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	body.sportlist .table-container th,
+	body.sportlist .table-container td {
+		border: 1px solid black;
+		padding: 8px;
+	}
+
+	body.sportlist .bold-line {
+		border-bottom: 4px solid black;
+	}
+
+	body.sportlist .checkbox-label {
+		font-size: 24px;
+	}
+	
+	.textbox2 {
+			 font-family: 'Sofia', sans-serif;
+  position: absolute;
+  top: 50px;
+  right: 650px;
+  font-size: 30px;
+  width: 300px;
+  height: 50px;
+  color : white;
+	}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* home page */
+		
+	body.HomePage {
+		font-family: 'Cardo', sans-serif; 
+		line-height: 2; 
+	}
+
+/* ////////////// */
+	body.HomePage .firstContainer {
+		background-size: cover;
+		background-image: url("photos/logo4ai.jpg");
+		
+		height: 800px;
+		background-color: #464c58;
+		text-align: center;
+	}
+
+	body.HomePage .boxContainer {
+		position: relative;
+		top: 40px;
+		width: 300px;
+		margin: 0 auto;
+		background-color: #3cc3a5;
+		padding: 10px;
+	}
+
+	body.HomePage .linkBox {
+		text-decoration: none;
+		color: white;
+		display: block;
+		text-align: center;
+		font-weight: bold;
+		font-size:25px;
+	}
+	
+	
+/* ///////////////// */
+	body.HomePage .aboutContainer {
+		height: 500px;
+		background-color: #946b6c;
+		color: white;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	body.HomePage .about {
+		margin-bottom: 30px; /* Adjust the value as per your requirement */
+		font-weight: bold;
+		font-family: 'Sofia', sans-serif;
+	}
+
+	body.HomePage .info {
+		position: relative;
+		direction: rtl;
+		text-align: center; 
+		margin: 0 auto;
+		max-width: 1300px;
+	}
+	
+/* /////////////////// */
+	
+	.successStoriesContainer {
+		height: 800px;
+		display: flex;
+		justify-content: space-between;
+		background-color: #d1cdcd;
+	}
+
+	.story {
+		position: relative;
+		top: 50px;
+		height: 700px;
+		width: 30%;
+		padding: 20px;
+		text-align: center;
+		background-color: #e1dfdf;
+		text-align: center;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+		transition: box-shadow 0.3s ease; /* Transition for box shadow */
+		overflow: hidden;
+		transition: transform 0.3s ease;
+	}
+	
+	.story:hover {
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Increased box shadow on hover */
+	}
+	
+	.story img {
+		position: relative;
+		top: 10px;
+		width: 80%	;
+		mix-blend-mode:multiply;
+		height: auto;
+		margin-bottom: 10px;
+		border-radius: 10%; /* Make the image border circular انا */
+		transition: transform 0.3s ease;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+	}
+
+	.story p {
+		position: relative;
+		top: 20px;
+		font-size: 14px;
+		color: #555555;
+		max-width: 300px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+
+
+
+
+
+
+
+
+
+	
